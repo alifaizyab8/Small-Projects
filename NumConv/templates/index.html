@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Num_Sys</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+</head>
+<body>
+    <h1>Number System Converter</h1>
+
+    <form method="post">
+        <label for="number">Enter Number:</label>
+        <input type="text" name="number" required>
+
+        <label for="base">Choose Base:</label>
+        <select name="base">
+            <option value="10">Decimal</option>
+            <option value="2">Binary</option>
+            <option value="8">Octal</option>
+            <option value="16">Hexadecimal</option>
+        </select>
+
+        <button type="submit">Convert</button>
+    </form>
+
+    {% if results %}
+        {% if results.error %}
+            <p style="color:red">{{ results.error }}</p>
+        {% else %}
+            <h2>Results:</h2>
+            <p>Decimal: {{ results.decimal }}</p>
+            <p>Binary: {{ results.binary }}</p>
+            <p>Octal: {{ results.octal }}</p>
+            <p>Hexadecimal: {{ results.hexadecimal }}</p>
+        {% endif %}
+    {% endif %}
+    
+
+</body>
+</html>
