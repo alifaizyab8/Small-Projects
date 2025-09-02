@@ -1,0 +1,30 @@
+# ---- Python ----
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pdb
+*.egg-info/
+*.egg
+
+# ---- Virtual Environments ----
+.venv/
+venv/
+ENV/
+env/
+*.env
+
+# ---- VS Code ----
+.vscode/
+*.code-workspace
+
+# ---- OS files ----
+.DS_Store
+Thumbs.db
+
+# ---- Logs ----
+*.log
+
+# ---- Others ----
+.coverage
+.pytest_cache/
